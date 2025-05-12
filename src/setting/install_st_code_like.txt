@@ -1,0 +1,50 @@
+1. Install 
+   for ios/android
+   >> npx expo install @react-native-clipboard/clipboard
+   Or for web
+   >> npm install clipboard-copy
+
+2. components/st_code.js
+   --------------
+   import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Text, IconButton, useTheme } from 'react-native-paper';
+import * as Clipboard from '@react-native-clipboard/clipboard';
+
+export default function St_code({ code }) {
+  const theme = useTheme();
+
+  const handleCopy = () => {
+    Clipboard.setString(code);
+  };
+
+  return (
+    <View style={[styles.container, { backgroundColor: theme.colors.surface }]}>
+      <Text style={[styles.code, { color: theme.colors.onSurface }]}>{code}</Text>
+      <IconButton
+        icon="content-copy"
+        size={20}
+        onPress={handleCopy}
+        style={styles.copyButton}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    position: 'relative',
+    padding: 12,
+    borderRadius: 8,
+    marginVertical: 10,
+  },
+  code: {
+    fontFamily: 'monospace',
+    fontSize: 14,
+  },
+  copyButton: {
+    position: 'absolute',
+    top: 4,
+    right: 4,
+  },
+});

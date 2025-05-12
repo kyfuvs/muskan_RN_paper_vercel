@@ -1,0 +1,34 @@
+** Install 
+1. >> npx expo install @expo/vector-icons
+
+=========================
+Under @expo/vector-icons
+https://www.npmjs.com/package/@expo/vector-icons
+
+Can use the following icons:
+0. @expo/vector-icons 
+   https://icons.expo.fyi/Index
+
+1. Ionicons
+   https://ionic.io/ionicons
+
+   -------
+   import Ionicons from '@expo/vector-icons/Ionicons';
+   return <Ionicons name='md-checkmark-circle' size={32} color='green' />;
+   -------
+
+2. MaterialIcons
+   https://fonts.google.com/icons
+
+3. FontAwesome
+   https://fontawesome.com/v4/icons/
+
+4. Feather
+
+5. AntDesign
+
+6. Entypo
+
+7. Fontisto
+
+8. SimpleLineIcons

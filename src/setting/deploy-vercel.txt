@@ -1,0 +1,19 @@
+Vercel (Recommended)
+1. First, export your app:
+   >> npx expo export
+
+  (This will generate the dist/ folder with your static web app.)
+
+2. Push your project to GitHub.
+
+3. Go to https://vercel.com/ and log in.
+
+4. Import your GitHub project.
+
+5. Vercel auto-detects the React app.
+
+    If needed, set:
+    - Framework: Other
+    - Build Command: npx expo export
+    - Output Directory: dist
+

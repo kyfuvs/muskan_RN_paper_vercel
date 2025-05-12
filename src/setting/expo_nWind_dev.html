@@ -1,0 +1,89 @@
+React Native Expo with NativeWind v4 and Typescript
+Dev 
+https://dev.to/y3asin/react-native-expo-with-nativewind-v4-and-typescript-38j3
+
+1. install expo 
+   >> npx create-expo-app@latest 
+2. NativeWind v4 installation 
+   >> npx expo install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
+3. config => tailwind.config.js
+   >> npx tailwindcss init
+   -----
+   // tailwind.config.js
+   -------
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    darkMode: 'class',
+    // NOTE: Update this to include the paths to all of your component files.
+    content: ["./app/**/*.{js,jsx,ts,tsx}"],
+    presets: [require("nativewind/preset")],
+    theme: {
+    extend: {},
+    },
+    plugins: [],
+}
+-----------
+
+4. global.css => in root directory
+   --- 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+---------- 
+
+5. add => babel.config.js
+------ 
+module.exports = function (api) {
+    api.cache(true);
+    return {
+      presets: [
+        ["babel-preset-expo", { jsxImportSource: "nativewind" }],
+        "nativewind/babel",
+      ],
+    };
+  };
+  ---------- 
+
+  6. add => metro.config.js 
+  --------- 
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require("nativewind/metro");
+
+const config = getDefaultConfig(__dirname);
+
+module.exports = withNativeWind(config, { input: "./global.css" });
+-------- 
+
+7. add => nativewind-env.d.ts 
+----- 
+/// <reference types="nativewind/types" /> 
+---- 
+
+8.  import the global.css to the app/_laybout.tsx 
+----- 
+import "../global.css"; 
+----- 
+
+9. app/index.js 
+------ 
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
+const index = () => {
+  return (
+    <View className='flex-1 justify-center bg-slate-300 '>
+      <Text className="text-center text-blue-600 font-bold text-3xl ">
+        index
+      </Text>
+    </View>
+  )
+}
+
+export default index
+
+const styles = StyleSheet.create({})
+------------- 
+
+10. Run 
+    >> npx expo start 
+

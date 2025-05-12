@@ -1,0 +1,16 @@
+expo doc
+https://docs.expo.dev/tutorial/create-your-first-app/
+
+** install 
+1. >> npx create-expo-app@latest StickerSmash
+
+** Reset
+1. >> npm run reset-project
+
+-------------
+** drawer install 
+1. >> npx expo install @react-navigation/drawer react-native-gesture-handler react-native-reanimated
+
+================
+** Run 
+1. >> npx expo start 

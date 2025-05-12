@@ -1,0 +1,10 @@
+echo "# muskan_RN_paper_vercel" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/kyfuvs/muskan_RN_paper_vercel.git
+git push -u origin master
+
+=================
+1. git commit -m "RN_paper-tabs-drawer-dark-mode"
