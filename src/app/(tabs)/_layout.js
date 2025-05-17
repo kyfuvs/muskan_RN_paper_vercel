@@ -1,13 +1,10 @@
 import { Tabs } from 'expo-router';
 import { useThemeToggle } from '@/hooks/useThemeToggle';
 import { Ionicons } from '@expo/vector-icons';
-// import Navbar_w_left_toggler from '../../components/navbar_w_left_toggler';
-// import Toggler_dark_mode_paper from '../../dark_mode_paper/toggler_dark_mode_paper';
-import Navbar_w_left_toggler from '@/components/navbar_w_left_toggler';
+// import Navbar_w_left_toggler from '@/components/navbar_w_left_toggler';
+import Navbar from '../../components/navbarFolder/navbar';
 import Toggler_dark_mode_paper from '@/dark_mode_paper/toggler_dark_mode_paper';
-// import Navbar_w_left_toggler from '../../components/navbar_w_left_toggler';
-// import { useThemeToggle } from '@/hooks/useThemeToggle';
-// import { useThemeToggle } from '../../hooks/useThemeToggle'
+
 
 export default function Tabs_Layout() {
   const { isDarkTheme, toggleTheme,theme } = useThemeToggle();
@@ -28,7 +25,8 @@ export default function Tabs_Layout() {
       <Tabs.Screen
         name="index"
         options={{
-          headerLeft:()=><Navbar_w_left_toggler/>,
+          // headerLeft:()=><Navbar_w_left_toggler/>,
+          headerLeft:()=><Navbar/>,
           headerTitle: () => null,
           title: 'Home',
           tabBarIcon: ({ color }) => <Ionicons size={28} name="home-outline" color={color} />,

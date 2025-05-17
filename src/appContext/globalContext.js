@@ -9,11 +9,17 @@ export const AppProvider = ({ children }) => {
   const toggleTheme = () => {
     setIsDarkTheme((prev) => !prev);
   };
+  const [navbarTogglerVisible, setNavbarTogglerVisible] = useState(false);
+  const toggle_navbarTogglerVisible = () => {
+    setNavbarTogglerVisible((prev) => !prev);
+  };
   
   return (
     <GlobalContext.Provider value={{
       isDarkTheme, setIsDarkTheme,
-      toggleTheme
+      toggleTheme,
+      navbarTogglerVisible, setNavbarTogglerVisible,
+      toggle_navbarTogglerVisible
       }}>
       {children}
     </GlobalContext.Provider>

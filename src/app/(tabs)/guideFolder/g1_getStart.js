@@ -9,7 +9,8 @@ const G1_getStart = () => {
     <View style={[styles.container,{backgroundColor:theme.colors.background}]}>
         <Text style={[styles.h1,{color:theme.colors.text}]}>Getting Started</Text>
         <Text style={[styles.h2,{color:theme.colors.text}]}>Installation</Text>
-        <St_code code={`const x = 10;\nconsole.log(x);`} />
+        {/* <St_code code={`const x = 10;\nconsole.log(x);`} /> */}
+        <St_code code={`npm install react-native-paper`}/>
 
     </View>
   )

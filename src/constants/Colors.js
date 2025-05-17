@@ -79,6 +79,8 @@ export const Colors = {
       "onSurface": "rgb(231, 225, 229)",
       "surfaceVariant": "rgb(74, 69, 78)",
       "onSurfaceVariant": "rgb(204, 196, 206)",
+      "code":"rgb(60, 59, 61)",
+      "onCode":"rgb(245, 240, 240)",
       "outline": "rgb(150, 142, 152)",
       "outlineVariant": "rgb(74, 69, 78)",
       "shadow": "rgb(0, 0, 0)",

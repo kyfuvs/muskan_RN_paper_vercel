@@ -8,3 +8,4 @@ git push -u origin master
 
 =================
 1. git commit -m "RN_paper-tabs-drawer-dark-mode"
+2. git commit -m "add navbar_sm"

@@ -4,17 +4,18 @@ import { Drawer } from 'expo-router/drawer';
 // import Navbar_css from '@/components/navbar_css';
 // import Toggler_dark_mode from '@/dark_mode/components/toggler_dark_mode';
 // import CustomDrawerContent from './custom_drawerContent';
-import Navbar from '../../../components/navbar'
-import Navbar_w_left_toggler from '../../../components/navbar_w_left_toggler';
+// import Navbar from '../../../components/navbar'
+// import Navbar_w_left_toggler from '../../../components/navbar_w_left_toggler';
+import Navbar from '../../../components/navbarFolder/navbar'
 import Toggler_dark_mode_paper from '../../../dark_mode_paper/toggler_dark_mode_paper'
 import { useThemeToggle } from '@/hooks/useThemeToggle';
-
+import Comp_custom_drawerContent from './compDrawer/comp_custom_drawerContent';
 
 export default function Comp_Layout() {
   const { isDarkTheme, toggleTheme,theme } = useThemeToggle();
   return (
     <Drawer
-    //   drawerContent={(props) => <CustomDrawerContent {...props} />}
+      drawerContent={(props) => <Comp_custom_drawerContent {...props} />}
       screenOptions={{
         // headerLeft:()=><Navbar/>,
         headerRight: () => <Toggler_dark_mode_paper />, // Dark mode toggle
@@ -36,7 +37,8 @@ export default function Comp_Layout() {
       <Drawer.Screen
         name="index" // Default screen
         options={{
-          headerLeft:()=><Navbar_w_left_toggler/>,
+          // headerLeft:()=><Navbar_w_left_toggler/>,
+          headerLeft:()=><Navbar/>,
           headerTitle: () => null,
 
         //   title: 'CSS',
