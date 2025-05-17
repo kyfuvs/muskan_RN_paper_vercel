@@ -14,7 +14,7 @@ const Navbar_sm_toggler= () => {
             onPress={() => toggle_navbarTogglerVisible()}
             style={{ marginLeft: 10 }}
             >
-            <Ionicons name="menu" size={24} color={theme.colors.text} />
+            <Ionicons name="caret-down-outline" size={24} color={theme.colors.text} />
             </TouchableOpacity>
     </View>
   )

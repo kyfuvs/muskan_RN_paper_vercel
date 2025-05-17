@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
   container: {
     position: 'absolute',
     top: 60,
+    left: 80,
     flex: 1,
     flexDirection: 'column',
     gap: 25,

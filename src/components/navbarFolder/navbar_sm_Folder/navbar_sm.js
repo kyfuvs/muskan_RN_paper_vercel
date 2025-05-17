@@ -4,6 +4,7 @@ import { useThemeToggle } from '@/hooks/useThemeToggle';
 import {useNavbarToggle} from '../../../hooks/useNavbarToggle'
 import Navbar_sm_toggler from './navbar_sm_toggler';
 import Navbar_sm_content from './navbar_sm_content';
+import Navbar_lg_toggler_drawer from '../navbar_lg_Folder/navbar_lg_toggler_drawer';
 
 const Navbar_sm = () => {
   const { isDarkTheme, toggleTheme,theme } = useThemeToggle();
@@ -11,6 +12,7 @@ const Navbar_sm = () => {
    
   return (
     <View style={styles.container}>
+      <Navbar_lg_toggler_drawer/>
       <Navbar_sm_toggler/>
       {/* {!navbarTogglerVisible && <Navbar_sm_toggler/>} */}
       {navbarTogglerVisible && <Navbar_sm_content/>}
@@ -28,5 +30,6 @@ const styles = StyleSheet.create({
   container:{
     position:'relative',
     flex:1,
+    flexDirection:'row'
   }
 })
